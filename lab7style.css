@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+	background: #f3f4f8;
+	color: #333;
+	line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 600;
+	margin-top: 40px;
+	color: #222;
+}
+
+a {
+	transition: 0.3s ease;
+	text-decoration: none;
+	color: #333;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 40px;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.navbar .logo {
+	font-size: 24px;
+	font-weight: 700;
+	color: #4a4aef;
+	letter-spacing: 0.7px;
+}
+
+.navbar ul {
+	display: flex;
+	gap: 30px;
+	list-style: none;
+}
+
+.navbar a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #333;
+	padding-bottom: 3px;
+	border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover {
+	color: #4a4aef;
+	border-bottom: 2px solid #4a4aef;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 50px auto;
+	padding: 0 20px;
+}
+
+.card {
+	background: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	margin-bottom: 25px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.projects {
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+	flex-wrap: nowrap;
+}
+
+.project {
+	background: white;
+	flex: 1 1 calc(33% - 20px);
+	min-width: 260px;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.project:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project a.button {
+	margin-top: 15px;
+	padding: 10px 14px;
+	background: #4a4aef;
+	color: white;
+	border-radius: 8px;
+	text-align: center;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.project a.button:hover {
+	background: #3333d6;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		gap: 12px;
+		padding: 15px 20px;
+	}
+
+	.navbar ul {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.projects {
+		flex-direction: column;
+	}
+
+	.project {
+		min-width: 100%;
+	}
+
+	.container {
+		margin: 30px auto;
+		flex-direction: column;
+	}
+}
